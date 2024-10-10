@@ -2,7 +2,7 @@ Create database passwords;
 
 use passwords;
 
-CREATE TABLE User (
+CREATE TABLE Users (
 user_id MEDIUMINT NOT NULL AUTO_INCREMENT,
 user_first_name varchar(32) NOT NULL,
 user_last_name varchar(32) NOT NULL,
@@ -11,17 +11,17 @@ user_email varchar(40) NOT NULL,
 PRIMARY KEY (user_id)
 );
 
-CREATE TABLE Website (
+CREATE TABLE Websites (
 website_name varchar(255) NOT NULL,
 website_url varchar(1000) NOT NULL,
 user_id MEDIUMINT NOT NULL,
 password varchar(40) NOT NULL,
 comment varchar(255) NOT NULL,
 create_time TIMESTAMP,
-FOREIGN KEY (user_id) REFERENCES User(user_id)
+FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
-insert into User (user_first_name, user_last_name, user_username, user_email)
+insert into Users (user_first_name, user_last_name, user_username, user_email)
 values
 ("Brecon", "Morgan", "edbob460", "breconiusmorg@gmail.com"),
 ("John", "Smith", "js780d", "johnsmith@icloud.com"),
