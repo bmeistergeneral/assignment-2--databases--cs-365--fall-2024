@@ -21,6 +21,9 @@ create_time TIMESTAMP,
 FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
+ALTER TABLE Passwords
+MODIFY create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
 insert into Users (user_first_name, user_last_name, user_username, user_email)
 values
 ("Brecon", "Morgan", "edbob460", "breconiusmorg@gmail.com"),
