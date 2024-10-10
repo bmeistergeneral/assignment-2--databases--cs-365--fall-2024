@@ -11,7 +11,7 @@ user_email varchar(40) NOT NULL,
 PRIMARY KEY (user_id)
 );
 
-CREATE TABLE Websites (
+CREATE TABLE Passwords (
 website_name varchar(255) NOT NULL,
 website_url varchar(1000) NOT NULL,
 user_id MEDIUMINT NOT NULL,
@@ -28,7 +28,7 @@ values
 ("Draco", "Malfoy", "severusrocks", "dracosucks@yahoo.com");
 
 -- Don't want to manually set user_id, but since it's initial data I think it is ok.
-insert into Websites (website_name, website_url, user_id, password, comment)
+insert into Passwords (website_name, website_url, user_id, password, comment)
 values
 ("Atlassian", "https://www.atlassian.com", 1, 'VknsS>(LR#,G5d)8FA;jJ@', NULL),
 ("JetBrains", "https://www.jetbrains.com", 1, 'qp+6N8v754yK_PF/*HauBR', NULL),
