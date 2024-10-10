@@ -20,3 +20,10 @@ comment varchar(255) NOT NULL,
 create_time TIMESTAMP,
 FOREIGN KEY (user_id) REFERENCES User(user_id)
 );
+
+insert into User (user_first_name, user_last_name, user_username, user_email)
+values
+("Brecon", "Morgan", "edbob460", "breconiusmorg@gmail.com"),
+("John", "Smith", "js780d", "johnsmith@icloud.com"),
+("Draco", "Malfoy", "severusrocks", "dracosucks@yahoo.com")
+
