@@ -32,7 +32,10 @@ values
 
 SET block_encryption_mode = 'aes-256-cbc';
 SET @key_str = UNHEX(SHA2('ThisKitchenIsForDancing', 512));
-SET @init_vector = RANDOM_BYTES(16);
+-- SET @init_vector = RANDOM_BYTES(16);
+
+-- Using fixed init_vector so it's the same across both files
+SET @init_vector = 1010101010101010;
 
 -- Don't want to manually set user_id, but since it's initial data I think it is ok.
 insert into Passwords (website_name, website_url, user_id, password, comment)
