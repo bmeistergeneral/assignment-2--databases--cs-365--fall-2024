@@ -40,13 +40,13 @@ SET @init_vector = 1010101010101010;
 -- Don't want to manually set user_id, but since it's initial data I think it is ok.
 insert into Passwords (website_name, website_url, user_id, password, comment)
 values
-("Atlassian", "https://www.atlassian.com", 1, AES_ENCRYPT('VknsS>(LR#,G5d)8FA;jJ@', @key_str, @init_vector), NULL),
+("Atlassian", "http://www.atlassian.com", 1, AES_ENCRYPT('VknsS>(LR#,G5d)8FA;jJ@', @key_str, @init_vector), NULL),
 ("JetBrains", "https://www.jetbrains.com", 1, AES_ENCRYPT('qp+6N8v754yK_PF/*HauBR', @key_str, @init_vector), NULL),
 ("MySQL", "https://www.mysql.com", 1, AES_ENCRYPT('C<@3a%ws9/TWe#`c$8}-7,', @key_str, @init_vector), NULL),
-("AMC", "https://www.amctheatres.com", 1, AES_ENCRYPT('f^j2@!NJ8)(m[:5&*4Kk=Y', @key_str, @init_vector), "movie tickets"),
-("Google", "https://www.google.com", 2, AES_ENCRYPT('Ef649#2P=r5%U+3Mh$eZq/', @key_str, @init_vector), NULL),
-("Ableton", "https://www.ableton.com", 2, AES_ENCRYPT('t~Gv&Z`4?Ac6FjqbJM@mK^', @key_str, @init_vector), NULL),
-("Netflix", "https://www.netflix.com", 2, AES_ENCRYPT('f+YLu{,@T")3}4N8c<wHr8', @key_str, @init_vector), NULL),
-("NordVPN", "https://www.nordvpn.com", 3, AES_ENCRYPT('ps(6[S82DFEMg;ZTNCa+k=', @key_str, @init_vector), NULL),
-("Spotify", "https://open.spotify.com", 3, AES_ENCRYPT('XVKW5$eG=h6s?mdL8x&bQ', @key_str, @init_vector), "student account"),
-("Pearson", "https://www.pearson.com/en-us.html", 3, AES_ENCRYPT('Jv%{yX?35p9s,kV]TB8!"^', @key_str, @init_vector), NULL);
+("AMC", "http://www.amctheatres.com", 1, AES_ENCRYPT('f^j2@!NJ8)(m[:5&*4Kk=Y', @key_str, @init_vector), "movie tickets"),
+("Google", "http://www.google.com", 2, AES_ENCRYPT('Ef649#2P=r5%U+3Mh$eZq/', @key_str, @init_vector), NULL),
+("Ableton", "http://www.ableton.com", 2, AES_ENCRYPT('t~Gv&Z`4?Ac6FjqbJM@mK^', @key_str, @init_vector), NULL),
+("Netflix", "http://www.netflix.com", 2, AES_ENCRYPT('f+YLu{,@T")3}4N8c<wHr8', @key_str, @init_vector), NULL),
+("NordVPN", "http://www.nordvpn.com", 3, AES_ENCRYPT('ps(6[S82DFEMg;ZTNCa+k=', @key_str, @init_vector), NULL),
+("Spotify", "http://open.spotify.com", 3, AES_ENCRYPT('XVKW5$eG=h6s?mdL8x&bQ', @key_str, @init_vector), "student account"),
+("Pearson", "http://www.pearson.com/en-us.html", 3, AES_ENCRYPT('Jv%{yX?35p9s,kV]TB8!"^', @key_str, @init_vector), NULL);
