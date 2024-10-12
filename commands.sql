@@ -13,3 +13,4 @@ SELECT CAST(AES_DECRYPT(password, @key_str, @init_vector) AS CHAR) AS 'Plain Tex
 SELECT website_name, website_url, user_first_name, user_last_name, user_username, user_email, CAST(AES_DECRYPT(password, @key_str, @init_vector) AS CHAR) AS 'Plain Text Password', comment 
 FROM Passwords INNER JOIN Users ON Passwords.user_id = Users.user_id WHERE website_url LIKE "https%";
 
+UPDATE Passwords SET website_url = "http://www.vordnpn.com" WHERE website_name = 'NordVPN';
