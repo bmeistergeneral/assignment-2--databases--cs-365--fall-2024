@@ -16,3 +16,4 @@ FROM Passwords INNER JOIN Users ON Passwords.user_id = Users.user_id WHERE websi
 UPDATE Passwords SET website_url = "http://www.vordnpn.com" WHERE website_name = 'NordVPN';
 UPDATE Passwords SET password = AES_ENCRYPT('A(V2wS),7>z-C3u;qa!mcv', @key_str, @init_vector) WHERE website_name = 'Atlassian' AND user_id = 1;
 
+DELETE FROM Passwords WHERE website_url = "http://www.netflix.com";
