@@ -17,3 +17,4 @@ UPDATE Passwords SET website_url = "http://www.vordnpn.com" WHERE website_name =
 UPDATE Passwords SET password = AES_ENCRYPT('A(V2wS),7>z-C3u;qa!mcv', @key_str, @init_vector) WHERE website_name = 'Atlassian' AND user_id = 1;
 
 DELETE FROM Passwords WHERE website_url = "http://www.netflix.com";
+DELETE FROM Passwords WHERE password = AES_ENCRYPT('Ef649#2P=r5%U+3Mh$eZq/', @key_str, @init_vector);
